@@ -1,0 +1,18 @@
+<!-- <h2>{{hero | json}}</h2> -->
+<!-- <div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name | titlecase}}</div>
+<div>
+    <label for="name">Hero Name: </label>
+    <input type="text" id="name" [(ngModel)]="hero.name" placeholder="name">
+</div> -->
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+    </li>
+  </ul>
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+
